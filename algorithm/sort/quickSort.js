@@ -1,5 +1,6 @@
 /**
  * quick sort
+ * 时间复杂度 O(nlogn) 空间复杂度 O(logn)
  * @param { Array } nums 
  */
 const quickSort = (nums) => {
@@ -9,11 +10,11 @@ const quickSort = (nums) => {
   let left = []; // left array
   let right = []; // right array
   for (let i = 0; i < nums.length; i++) { // loop
-    if(povit > nums[i]) { // if nums[i] less then pivot
+    if (povit > nums[i]) { // if nums[i] less then pivot
       left.push(nums[i]); // push nums[i] to left array
     } else { // if nums[i] greater then pivot
       right.push(nums[i]); // push nums[i] to right array
-    } 
+    }
   }
   return quickSort(left).concat([povit], quickSort(right)); // concat left, pivot, right
 }
